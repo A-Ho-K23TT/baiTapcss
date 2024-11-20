@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-image: url(images/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px;
+    height: 50rem;
+    background-position: top;
+    display: flex;
+    opacity: 1;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 45px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+
+.navbar a {
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.action-button {
+    padding: 16px;
+    border: 3px solid white;
+    border-radius: 30px;
+}
+
+.title {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 100px;
+}
+
+.p-title {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.h1-title {
+    color: white;
+    font-size: 80px;
+}
+
+.a-title {
+    background-color: rgb(5, 221, 233);
+    height: 45px;
+    width: 130px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    line-height: 80px;
+}
+
+.content1 h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.content1 p {
+    font-size: 20px;
+    line-height: 50px;
+    opacity: 0.7;
+}
+
+.flex-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.flex-item {
+    text-align: center;
+    width: 45%;
+}
+
+.flex-item img {
+    width: 100%;
+    height: auto;
+}
+
+.flex-item h2 {
+    font-size: 20px;
+    color: rgb(7, 212, 7);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+
+.flex-item p {
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+.footer {
+    background-color: #333;
+    color: #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.menu-toggle {
+    display: none;
+    /* Hide checkbox by default */
+}
+
+.hamburger {
+    display: none;
+    /* Hide hamburger by default */
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        /* Hide menu links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #2980b9;
+        width: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .hamburger {
+        display: block;
+        /* Show hamburger icon */
+    }
+
+    .navbar a {
+        padding: 10px;
+        text-align: center;
+        display: block;
+    }
+
+    .menu-toggle:checked + .hamburger + .navbar {
+        display: flex;
+        /* Show menu links when checkbox is checked */
+    }
+
+    /* Hamburger Animation */
+    .menu-toggle:checked + .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
