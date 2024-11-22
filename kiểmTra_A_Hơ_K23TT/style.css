@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-image: url(images/hero.png);
+    color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 56rem;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    padding: 10px 0;
+}
+
+.logo {
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: -2px;
+    cursor: pointer;
+}
+
+.logo2 {
+    color: rgb(255, 123, 8);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.hero_text {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 3rem;
+    max-width: 900px; 
+    margin-left: 39rem;
+    margin-bottom:  25rem;
+    line-height: 3rem;
+}
+
+.hero_text h1 {
+    
+    padding: 1rem;
+    font-size: 3.3rem;
+    margin-bottom: 1rem;
+}
+
+.hero_text p {
+    color: black;
+    font-size: 20px;
+}
+
+.hero_text a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    background-color: aliceblue;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.content {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+.content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    line-height: 80px;
+}
+.content1 h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.content1 p {
+    font-size: 20px;
+    line-height: 50px;
+    opacity: 0.7;
+}
+.flex-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+.flex-item {
+    text-align: center;
+    width: 45%;
+}
+.flex-item img {
+    width: 100%;
+    height: auto;
+}
+.flex-item h2 {
+    font-size: 20px;
+    color: rgb(7, 212, 7);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+.flex-item p {
+    font-size: 20px;
+    opacity: 0.7;
+}
+.footer {
+    background-color: #333;
+    color: #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #2980b9;
+        width: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        text-align: center;
+        display: block;
+    }
+
+    .menu-toggle:checked+.hamburger+.nav-links {
+        display: flex;
+    }
+
+    .menu-toggle:checked+.hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle:checked+.hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked+.hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+   
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.flex-item {
+    flex: 1 1 calc(33.33% - 20px);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.flex-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.flex-item h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.flex-item p {
+    font-size: 1rem;
+}
+
+.flex-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
